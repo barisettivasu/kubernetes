@@ -60,4 +60,15 @@ You can follow same procedure in the official  AWS document [Getting started wit
    kubectl get nodes
    kubectl run pod tomcat --image=tomcat 
    ```
+   
+   eksctl create nodegroup \
+  --cluster my-cluster \
+  --region region-code \
+  --name my-mng \
+  --node-type m5.large \
+  --nodes 3 \
+  --nodes-min 2 \
+  --nodes-max 4 \
+  --ssh-access \
+  --ssh-public-key my-key
 
